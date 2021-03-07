@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mit.basic.model.User;
+import com.mit.basic.model.UserModel;
 import com.mit.basic.service.AuthService;
 
 @RestController
@@ -17,7 +17,7 @@ public class AuthController {
 	private AuthService authService;
 	
 	@PostMapping
-	public ResponseEntity<?> registerUser(@RequestBody User user){
+	public ResponseEntity<?> registerUser(@RequestBody UserModel user){
 		try {
 			return ResponseEntity.ok(authService.registerUser(user));
 		} catch (Exception e) {

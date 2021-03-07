@@ -3,10 +3,10 @@ package com.mit.basic.repository;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.mit.basic.model.User;
+import com.mit.basic.model.UserModel;
 
 @Repository
-public interface UserRepository extends MongoRepository<User, String> {
+public interface UserRepository extends MongoRepository<UserModel, String> {
 
-	User findByUsername(String username);
+	UserModel findByUsername(String username);
 }
