@@ -1,5 +1,7 @@
 package com.mit.basic.service;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -22,7 +24,7 @@ public class UserService implements UserDetailsService{
 		if(user == null) return null;
 		String name = user.getUsername();
 		String pwd = user.getPassword();
-		return new User(name,pwd,null);
+		return new User(name,pwd,new ArrayList<>());
 	}
 
 	
